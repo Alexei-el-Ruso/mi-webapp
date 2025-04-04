@@ -1,0 +1,22 @@
+html {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+body {
+  background-image: radial-gradient(red, gray);
+  color: white;
+}
+
+h1 {
+  font-size: 80px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 70px;
+}
+
+p {
+  font-size: 20px;
+}
