@@ -3,12 +3,24 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{ { url_for('static', filename='css/style.css') } }">
+		<link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
   </head>
   </body>
-    <h1> PAGINA WEB POR MEDIO DE FLASK </h1>
-    <p>
-      Lorem ipsum dolor
-    </p>
+    <h2> PAGINA WEB POR MEDIO DE FLASK </h2>
+		<div>
+			<h1> Catálogo de Productos </h1>
+
+			<div style="float: left;" class="catal">
+				{% for productos in productos %}
+				<button class="product-box" type="button" onclick="window.location.href='{{ url_for('agregar_carrito', id=productos.id) }}'">
+						<img src="" alt={{ productos.Nombre }}>
+						${{ productos.Precio }}
+				</button>
+				{% endfor %}
+			</div>
+			<div style="float: right; width: 25vw;">
+				Test
+			</div>
   <body>
 </html>
